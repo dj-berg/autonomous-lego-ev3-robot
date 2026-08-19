@@ -10,7 +10,7 @@ An autonomous LEGO MINDSTORMS EV3 vehicle designed, built, and programmed with M
 
 ## 📸 Project Preview
 
-<img width="301" height="403" alt="image" src="https://github.com/user-attachments/assets/4411a8f3-eae6-4821-9695-ec024c1f66be" />
+![LEGO EV3 Robot Navigating Maze](images/robot-maze.png)
 
 *Autonomous LEGO MINDSTORMS EV3 robot navigating the physical maze course during testing.*
 
@@ -40,10 +40,15 @@ The vehicle also needed to remain stable, avoid becoming trapped in navigation l
 
 ## ⚙️ Robot Design
 
-<img width="302" height="220" alt="image" src="https://github.com/user-attachments/assets/e48182da-85c5-4685-a89d-960313e87000" />
-<img width="290" height="216" alt="image" src="https://github.com/user-attachments/assets/4f6951fa-4ec8-45e9-ae8d-1036328564b8" />
+### Left-Side View
 
-*Side view of the completed vehicle showing the EV3 hardware, sensors, wheels, chassis, and custom mechanisms.*
+![LEGO EV3 Robot Left-Side Design](images/robot-design-left-side.png)
+
+### Right-Side View
+
+![LEGO EV3 Robot Right-Side Design](images/robot-design-right-side.png)
+
+*Multiple views of the completed vehicle showing the EV3 hardware, sensors, wheels, chassis, wiring, and custom mechanisms.*
 
 Our team collaboratively designed and constructed the vehicle using LEGO components and the MINDSTORMS EV3 platform.
 
@@ -150,7 +155,7 @@ Continue Navigation
 
 ## ♿ Passenger Transportation
 
-<img width="322" height="437" alt="image" src="https://github.com/user-attachments/assets/e67a3738-9e46-4265-b96b-4ac1c48a3082" />
+![LEGO EV3 Passenger Pickup](images/passenger-pickup.png)
 
 *Robot positioned at the blue passenger pickup area during maze testing.*
 
@@ -209,9 +214,9 @@ The vehicle needed to:
 
 ## 👥 Team Collaboration
 
-<img width="342" height="457" alt="image" src="https://github.com/user-attachments/assets/c48fe381-3138-482a-9b8b-0e4c5fde6134" />
+![LEGO EV3 Project Team](images/team.png)
 
-*Project team with the completed LEGO MINDSTORMS EV3 robot.*
+*Four-person project team with the completed LEGO MINDSTORMS EV3 robot.*
 
 This project was completed as part of a four-person engineering team.
 
@@ -267,10 +272,11 @@ autonomous-lego-ev3-robot/
 ├── README.md
 │
 └── images/
-    ├── robot-maze.jpg
-    ├── robot-hardware.jpg
-    ├── passenger-pickup.jpg
-    └── team.jpg
+    ├── passenger-pickup.png
+    ├── robot-design-left-side.png
+    ├── robot-design-right-side.png
+    ├── robot-maze.png
+    └── team.png
 ```
 
 ---
