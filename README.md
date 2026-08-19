@@ -150,7 +150,7 @@ Continue Navigation
 
 ## ♿ Passenger Transportation
 
-<img width="485" height="397" alt="image" src="https://github.com/user-attachments/assets/23d9232c-8335-4aeb-a878-9ca47c05a07d" />
+<img width="322" height="437" alt="image" src="https://github.com/user-attachments/assets/e67a3738-9e46-4265-b96b-4ac1c48a3082" />
 
 *Robot positioned at the blue passenger pickup area during maze testing.*
 
