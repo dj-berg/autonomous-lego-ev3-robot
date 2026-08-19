@@ -40,15 +40,8 @@ The vehicle also needed to remain stable, avoid becoming trapped in navigation l
 
 ## ⚙️ Robot Design
 
-<!--
-PHOTO 2 NEEDED: ROBOT HARDWARE CLOSE-UP
-Use your clean side-view photo showing the EV3 brick, wheels,
-sensors, wiring, chassis, and mechanisms.
-
-Save as: images/robot-hardware.jpg
--->
-
-![LEGO EV3 Robot Hardware](images/robot-hardware.jpg)
+<img width="302" height="220" alt="image" src="https://github.com/user-attachments/assets/e48182da-85c5-4685-a89d-960313e87000" />
+<img width="290" height="216" alt="image" src="https://github.com/user-attachments/assets/4f6951fa-4ec8-45e9-ae8d-1036328564b8" />
 
 *Side view of the completed vehicle showing the EV3 hardware, sensors, wheels, chassis, and custom mechanisms.*
 
@@ -157,15 +150,7 @@ Continue Navigation
 
 ## ♿ Passenger Transportation
 
-<!--
-PHOTO 3 NEEDED: BLUE PICKUP ZONE
-Use your photo showing the robot positioned on the blue section
-of the course.
-
-Save as: images/passenger-pickup.jpg
--->
-
-![Passenger Pickup](images/passenger-pickup.jpg)
+<img width="485" height="397" alt="image" src="https://github.com/user-attachments/assets/23d9232c-8335-4aeb-a878-9ca47c05a07d" />
 
 *Robot positioned at the blue passenger pickup area during maze testing.*
 
@@ -224,14 +209,7 @@ The vehicle needed to:
 
 ## 👥 Team Collaboration
 
-<!--
-PHOTO 4 NEEDED: TEAM PHOTO
-Use your photo showing the team together with the completed robot.
-
-Save as: images/team.jpg
--->
-
-![Project Team](images/team.jpg)
+<img width="307" height="405" alt="image" src="https://github.com/user-attachments/assets/9e7685a1-9a81-457c-85c5-04087f2a7178" />
 
 *Project team with the completed LEGO MINDSTORMS EV3 robot.*
 
