@@ -10,7 +10,14 @@ An autonomous LEGO MINDSTORMS EV3 vehicle designed, built, and programmed with M
 
 ## 📸 Project Preview
 
-<!-- IMAGE 1: Robot navigating the maze near the yellow zone -->
+<!-- 
+PHOTO 1 NEEDED: ROBOT IN MAZE
+Use your best photo showing the completed robot actually navigating
+the wooden maze, preferably the photo near the yellow zone.
+
+Save as: images/robot-maze.jpg
+-->
+
 ![LEGO EV3 Robot Navigating Maze](images/robot-maze.jpg)
 
 *Autonomous LEGO MINDSTORMS EV3 robot navigating the physical maze course during testing.*
@@ -35,13 +42,20 @@ The robot needed to:
 8. Unload the passenger
 9. Complete the course
 
-In addition to completing the route, the vehicle needed to remain stable, avoid becoming trapped in navigation loops, and transport the passenger safely.
+The vehicle also needed to remain stable, avoid becoming trapped in navigation loops, and transport the passenger safely.
 
 ---
 
 ## ⚙️ Robot Design
 
-<!-- IMAGE 2: Clean side view showing EV3 brick, sensors, wheels, and mechanisms -->
+<!--
+PHOTO 2 NEEDED: ROBOT HARDWARE CLOSE-UP
+Use your clean side-view photo showing the EV3 brick, wheels,
+sensors, wiring, chassis, and mechanisms.
+
+Save as: images/robot-hardware.jpg
+-->
+
 ![LEGO EV3 Robot Hardware](images/robot-hardware.jpg)
 
 *Side view of the completed vehicle showing the EV3 hardware, sensors, wheels, chassis, and custom mechanisms.*
@@ -58,7 +72,7 @@ The robot incorporated:
 - Custom LEGO chassis
 - Mechanical passenger handling system
 
-The physical design had to support both autonomous navigation and passenger transportation while remaining stable during movement and turns.
+The physical design needed to support both autonomous navigation and passenger transportation while remaining stable during movement and turns.
 
 ---
 
@@ -66,7 +80,7 @@ The physical design had to support both autonomous navigation and passenger tran
 
 The robot used multiple sensor inputs to make decisions as it traveled through the maze.
 
-The navigation system was designed around several basic behaviors:
+The navigation system followed several basic behaviors:
 
 - **Clear path →** Continue forward
 - **Front obstacle/contact →** Turn right
@@ -151,7 +165,14 @@ Continue Navigation
 
 ## ♿ Passenger Transportation
 
-<!-- IMAGE 3: Robot positioned on the blue passenger pickup zone -->
+<!--
+PHOTO 3 NEEDED: BLUE PICKUP ZONE
+Use your photo showing the robot positioned on the blue section
+of the course.
+
+Save as: images/passenger-pickup.jpg
+-->
+
 ![Passenger Pickup](images/passenger-pickup.jpg)
 
 *Robot positioned at the blue passenger pickup area during maze testing.*
@@ -190,12 +211,14 @@ The vehicle needed to:
 
 ## 🛠️ Technologies & Concepts
 
-**Hardware & Software**
+### Hardware & Software
+
 - MATLAB
 - LEGO MINDSTORMS EV3
 - EV3 Sensors & Motors
 
-**Engineering Concepts**
+### Engineering Concepts
+
 - Autonomous Robotics
 - Sensor Integration
 - Motor Control
@@ -209,7 +232,13 @@ The vehicle needed to:
 
 ## 👥 Team Collaboration
 
-<!-- IMAGE 4: Team photo holding the completed robot -->
+<!--
+PHOTO 4 NEEDED: TEAM PHOTO
+Use your photo showing the team together with the completed robot.
+
+Save as: images/team.jpg
+-->
+
 ![Project Team](images/team.jpg)
 
 *Project team with the completed LEGO MINDSTORMS EV3 robot.*
@@ -226,7 +255,7 @@ Developing a successful solution required coordinating the software and mechanic
 
 The robot was tested repeatedly throughout development to identify problems and improve its autonomous behavior.
 
-Testing focused on areas such as:
+Testing focused on:
 
 - Sensor response
 - Obstacle detection
@@ -244,7 +273,7 @@ Each test provided feedback that could be used to adjust the physical design or 
 
 ## 💡 What I Learned
 
-This project provided hands-on experience combining software, robotics, and mechanical design to solve a real engineering challenge.
+This project provided hands-on experience combining software, robotics, and mechanical design to solve an engineering challenge.
 
 Key takeaways included:
 
