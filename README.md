@@ -209,7 +209,7 @@ The vehicle needed to:
 
 ## 👥 Team Collaboration
 
-<img width="307" height="405" alt="image" src="https://github.com/user-attachments/assets/9e7685a1-9a81-457c-85c5-04087f2a7178" />
+<img width="342" height="457" alt="image" src="https://github.com/user-attachments/assets/c48fe381-3138-482a-9b8b-0e4c5fde6134" />
 
 *Project team with the completed LEGO MINDSTORMS EV3 robot.*
 
