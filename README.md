@@ -10,15 +10,7 @@ An autonomous LEGO MINDSTORMS EV3 vehicle designed, built, and programmed with M
 
 ## 📸 Project Preview
 
-<!-- 
-PHOTO 1 NEEDED: ROBOT IN MAZE
-Use your best photo showing the completed robot actually navigating
-the wooden maze, preferably the photo near the yellow zone.
-
-Save as: images/robot-maze.jpg
--->
-
-![LEGO EV3 Robot Navigating Maze](images/robot-maze.jpg)
+<img width="301" height="403" alt="image" src="https://github.com/user-attachments/assets/4411a8f3-eae6-4821-9695-ec024c1f66be" />
 
 *Autonomous LEGO MINDSTORMS EV3 robot navigating the physical maze course during testing.*
 
