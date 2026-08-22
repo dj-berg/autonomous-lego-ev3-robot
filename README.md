@@ -1,145 +1,164 @@
-# 🤖 Autonomous LEGO MINDSTORMS EV3 Robot
+# 🚗 Autonomous Vehicle Navigation System
 
-An autonomous LEGO MINDSTORMS EV3 vehicle designed, built, and programmed with MATLAB to navigate a maze, respond to environmental markers, and safely transport a model wheelchair passenger from pickup to drop-off.
+A small-scale autonomous vehicle prototype designed, built, and programmed to navigate a physical environment, respond to environmental markers and obstacles, and transport a model wheelchair passenger between designated pickup and drop-off locations.
+
+The system was implemented using **MATLAB and LEGO MINDSTORMS EV3**, combining sensor-driven navigation, motor control, autonomous decision-making, and mechanical passenger handling.
 
 **Platform:** LEGO MINDSTORMS EV3  
 **Programming Language:** MATLAB  
+**Project Type:** Autonomous Vehicle / Robotics Prototype  
 **Team Size:** 4
 
 ---
 
 ## 📸 Project Preview
 
-![LEGO EV3 Robot Navigating Maze](images/robot-maze.png)
+![Autonomous Vehicle Navigating Course](images/robot-maze.png)
 
-*Autonomous LEGO MINDSTORMS EV3 robot navigating the physical maze course during testing.*
+*Autonomous vehicle prototype navigating the physical course during testing.*
 
 ---
 
 ## 🎯 Project Overview
 
-This project challenged our four-person team to design, build, program, and test an autonomous vehicle using the LEGO MINDSTORMS EV3 platform.
+This project challenged our four-person engineering team to design, build, program, and test a **small-scale autonomous transportation system**.
 
-The goal was to create a robot capable of navigating different maze configurations without direct human control while completing a passenger transportation mission.
+Using LEGO MINDSTORMS EV3 as the hardware platform and MATLAB for programming, we developed a vehicle capable of navigating different physical course configurations without direct human control.
 
-The robot needed to:
+The system combined environmental sensing, autonomous navigation logic, motor control, and a mechanical passenger-handling mechanism to complete a transportation mission.
+
+The vehicle needed to:
 
 1. Begin at the designated starting area
-2. Autonomously navigate the maze
-3. Stop when encountering designated stop markers
-4. Reach the passenger pickup point
-5. Pick up a model representing a person in a wheelchair
-6. Safely transport the passenger through the maze
-7. Reach the designated drop-off point
-8. Unload the passenger
-9. Complete the course
+2. Autonomously navigate the course
+3. Detect obstacles and available paths
+4. Respond to designated environmental markers
+5. Stop at required stop markers
+6. Locate the passenger pickup point
+7. Pick up a model wheelchair passenger
+8. Transport the passenger through the course
+9. Locate the designated drop-off point
+10. Safely unload the passenger
+11. Complete the course autonomously
 
-The vehicle also needed to remain stable, avoid becoming trapped in navigation loops, and transport the passenger safely.
+The vehicle also needed to remain stable, respond consistently to sensor input, and avoid becoming trapped in repeating navigation patterns.
 
 ---
 
-## ⚙️ Robot Design
+## ⚙️ Vehicle Design
 
 ### Left-Side View
 
-![LEGO EV3 Robot Left-Side Design](images/robot-design-left-side.png)
+![Autonomous Vehicle Left-Side Design](images/robot-design-left-side.png)
 
 ### Right-Side View
 
-![LEGO EV3 Robot Right-Side Design](images/robot-design-right-side.png)
+![Autonomous Vehicle Right-Side Design](images/robot-design-right-side.png)
 
-*Multiple views of the completed vehicle showing the EV3 hardware, sensors, wheels, chassis, wiring, and custom mechanisms.*
+*Multiple views of the completed autonomous vehicle prototype showing the EV3 controller, sensors, drivetrain, chassis, wiring, and passenger-handling mechanism.*
 
-Our team collaboratively designed and constructed the vehicle using LEGO components and the MINDSTORMS EV3 platform.
+Our team designed and constructed the vehicle around the **LEGO MINDSTORMS EV3 programmable platform**.
 
-The robot incorporated:
+The prototype incorporated:
 
-- LEGO MINDSTORMS EV3 programmable brick
+- LEGO MINDSTORMS EV3 programmable controller
 - Electric drive motors
-- Color sensing
-- Touch sensing
-- Distance/proximity sensing
+- Color sensor
+- Touch sensor
+- Distance/proximity sensor
 - Custom LEGO chassis
-- Mechanical passenger handling system
+- Mechanical passenger-handling system
 
-The physical design needed to support both autonomous navigation and passenger transportation while remaining stable during movement and turns.
+The physical design needed to support both autonomous navigation and passenger transportation while maintaining stability during movement and turns.
+
+The hardware platform allowed the team to prototype many of the fundamental concepts involved in autonomous vehicles: **environmental sensing, decision-making, navigation, physical actuation, and transportation.**
 
 ---
 
-## 🧠 Autonomous Navigation
+## 🧠 Autonomous Navigation System
 
-The robot used multiple sensor inputs to make decisions as it traveled through the maze.
+The vehicle used multiple sensor inputs to make navigation decisions as it traveled through the course.
 
-The navigation system followed several basic behaviors:
+Rather than relying entirely on a predetermined sequence of movements, the system continuously responded to its surrounding environment.
+
+### Navigation Behavior
+
+The primary navigation rules were:
 
 - **Clear path →** Continue forward
-- **Front obstacle/contact →** Turn right
+- **Front contact/obstacle →** Turn right
 - **Opening detected on the left →** Turn left
-- **Course marker detected →** Perform the appropriate programmed action
+- **Course marker detected →** Execute the corresponding programmed action
 
-This allowed the vehicle to react to its surroundings instead of relying entirely on a predetermined sequence of movements.
+The front-mounted touch sensor provided collision detection, while the left-side distance sensor helped determine when an open path was available.
 
-### Navigation Concept
+The color sensor identified mission-specific environmental markers.
+
+### Navigation Decision Loop
 
 ```text
-                Read Sensors
-                     │
-                     ▼
-             Check Course Marker
-                     │
-                     ▼
-             Check Surroundings
-              /      |       \
-         Wall Ahead  Left Open  Clear
+                 Read Sensors
+                      │
+                      ▼
+              Check Color Marker
+                      │
+                      ▼
+              Check Environment
+               /      |       \
+          Front Hit  Left Open  Clear
               │          │        │
           Turn Right   Turn Left  Forward
-              \          |        /
-                     ▼
-                   Repeat
+               \         |        /
+                      ▼
+                    Repeat
 ```
 
-The robot continuously repeated this decision process as it progressed through the course.
+This continuous **sense → decide → act** cycle allowed the vehicle to adapt its movement according to its immediate environment.
 
 ---
 
-## 🚦 Course Markers & Mission
+## 🚦 Environmental Markers
 
-Different colored areas of the course represented important locations or instructions within the autonomous mission.
+Colored areas within the course represented important locations and instructions for the autonomous vehicle.
 
-| Color | Purpose |
+| Color | Vehicle Response |
 | --- | --- |
 | 🟨 **Yellow** | Starting / ending area |
 | 🟦 **Blue** | Passenger pickup point |
 | 🟩 **Green** | Passenger drop-off point |
 | 🟥 **Red** | Stop marker |
 
-The robot's color sensing allowed it to recognize these areas and perform the appropriate action as it progressed through the maze.
+The vehicle's color sensor allowed the navigation software to distinguish these areas and execute the corresponding mission behavior.
 
-### Mission Sequence
+---
+
+## 🗺️ Autonomous Mission
+
+The overall mission combined navigation, environmental recognition, and passenger transportation into a single autonomous sequence.
 
 ```text
 🟨 START
     │
     ▼
-Navigate Maze
+Autonomous Navigation
     │
     ├──── 🟥 STOP MARKER
-    │         │
+    │          │
     │      Stop briefly
-    │         │
-    ▼         ▼
+    │          │
+    ▼          ▼
 🟦 PASSENGER PICKUP
     │
     ├──── Load Passenger
     │
     ▼
-Continue Navigation
+Continue Autonomous Navigation
     │
     ├──── 🟥 STOP MARKER
-    │         │
+    │          │
     │      Stop briefly
-    │         │
-    ▼         ▼
+    │          │
+    ▼          ▼
 🟩 PASSENGER DROP-OFF
     │
     ├──── Unload Passenger
@@ -151,123 +170,221 @@ Continue Navigation
 🟨 FINISH
 ```
 
+The mission required multiple subsystems to operate together successfully rather than treating navigation, sensing, and passenger handling as isolated tasks.
+
 ---
 
-## ♿ Passenger Transportation
+## ♿ Autonomous Passenger Transportation
 
-![LEGO EV3 Passenger Pickup](images/passenger-pickup.png)
+![Autonomous Vehicle Passenger Pickup](images/passenger-pickup.png)
 
-*Robot positioned at the blue passenger pickup area during maze testing.*
+*Vehicle positioned at the blue passenger pickup area during course testing.*
 
-A major component of the project was transporting a cardboard model representing a person using a wheelchair.
+A major component of the project was demonstrating **autonomous passenger transportation**.
 
-The vehicle incorporated a mechanical system that allowed it to interact with the passenger at designated locations.
+The passenger was represented by a cardboard model of a person using a wheelchair. The vehicle incorporated a mechanical system that allowed it to interact with the passenger at designated locations.
 
-The complete transportation mission required the robot to autonomously navigate to the pickup area, secure the passenger, transport the passenger through the maze, reach the drop-off area, and safely release the passenger.
+The complete transportation sequence required the vehicle to:
 
-Passenger safety also influenced the physical design. The robot needed to avoid tipping over or making movements that could cause the passenger to fall during transportation.
+1. Navigate autonomously to the pickup area
+2. Recognize the blue pickup marker
+3. Activate the passenger-handling mechanism
+4. Secure the passenger
+5. Continue autonomous navigation
+6. Maintain stability while transporting the passenger
+7. Recognize the green drop-off marker
+8. Release the passenger
+9. Continue toward the finishing area
+
+Passenger stability influenced both the mechanical and navigation design. Turns and movement needed to be controlled well enough to prevent the passenger from falling during transportation.
+
+---
+
+## 🔄 Sense → Decide → Act
+
+At the core of the vehicle was a simple autonomous control loop:
+
+```text
+┌──────────────────────┐
+│    Sense Environment │
+│                      │
+│ Touch • Distance     │
+│ Color                │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│    Make Decision     │
+│                      │
+│ Forward • Left       │
+│ Right • Stop         │
+│ Pickup • Drop-off    │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│     Take Action      │
+│                      │
+│ Motors • Movement    │
+│ Passenger Mechanism  │
+└──────────┬───────────┘
+           │
+           └──────────────► Repeat
+```
+
+Although implemented at a small scale, this demonstrates a fundamental autonomous-systems concept: using environmental input to continuously influence physical behavior.
 
 ---
 
 ## 🧪 Engineering Requirements
 
-Successful completion required more than simply reaching the end of the maze.
+Successful completion required more than simply reaching the end of the course.
 
-The vehicle needed to:
+The autonomous vehicle needed to:
 
-- Navigate different maze configurations autonomously
-- Detect walls and available paths
+- Navigate different course configurations
+- Operate without direct human control
+- Detect physical obstacles
+- Detect available paths
 - Respond correctly to sensor input
-- Recognize designated course markers
+- Recognize designated environmental markers
 - Stop at required stop locations
-- Reach the passenger pickup point
+- Locate the passenger pickup point
 - Successfully load the passenger
-- Transport the passenger through the maze
-- Reach the designated drop-off point
+- Transport the passenger through the course
+- Locate the designated drop-off point
 - Safely unload the passenger
-- Avoid becoming trapped in repeating navigation loops
-- Remain stable and avoid tipping over
-- Complete the mission without direct human control
+- Avoid repeating navigation loops
+- Maintain physical stability
+- Complete the transportation mission
+
+These requirements required coordination between the software, sensors, motors, chassis, and passenger-handling mechanism.
 
 ---
 
-## 🛠️ Technologies & Concepts
+## 🛠️ Technologies & Engineering Concepts
 
-### Hardware & Software
+### Technologies
 
-- MATLAB
-- LEGO MINDSTORMS EV3
-- EV3 Sensors & Motors
+- **MATLAB**
+- **LEGO MINDSTORMS EV3**
+- **EV3 Motors**
+- **Touch Sensor**
+- **Distance Sensor**
+- **Color Sensor**
 
 ### Engineering Concepts
 
-- Autonomous Robotics
-- Sensor Integration
-- Motor Control
-- Conditional Logic
+- Autonomous Systems
+- Sensor-Driven Navigation
+- Robotics
+- Environmental Sensing
 - Obstacle Detection
+- Motor Control
+- Conditional Decision Logic
 - Hardware & Software Integration
 - Mechanical Design
-- Testing & Iteration
+- Autonomous Transportation
+- System Testing
+- Iterative Engineering
 
 ---
 
 ## 👥 Team Collaboration
 
-![LEGO EV3 Project Team](images/team.png)
+![Autonomous Vehicle Project Team](images/team.png)
 
-*Four-person project team with the completed LEGO MINDSTORMS EV3 robot.*
+*Four-person engineering team with the completed autonomous vehicle prototype.*
 
-This project was completed as part of a four-person engineering team.
+This project was completed as part of a **four-person engineering team**.
 
-We collaborated on the robot's physical design, programming approach, sensor integration, navigation strategy, testing, troubleshooting, and iterative improvements.
+We collaborated across:
 
-Developing a successful solution required coordinating the software and mechanical components of the vehicle while repeatedly testing its performance on the physical course.
+- Physical vehicle design
+- MATLAB programming
+- Sensor integration
+- Navigation strategy
+- Mechanical passenger handling
+- Testing
+- Troubleshooting
+- Iterative improvements
+
+Successful operation required coordinating the software and mechanical components of the system while repeatedly testing the vehicle against the physical course requirements.
 
 ---
 
 ## 🧪 Testing & Iteration
 
-The robot was tested repeatedly throughout development to identify problems and improve its autonomous behavior.
+The autonomous vehicle was repeatedly tested throughout development to identify failures and improve its behavior.
 
 Testing focused on:
 
 - Sensor response
 - Obstacle detection
+- Distance detection
 - Turning behavior
 - Color recognition
-- Maze navigation
-- Passenger pickup and drop-off
+- Navigation consistency
+- Passenger pickup
+- Passenger transportation
+- Passenger drop-off
 - Vehicle stability
-- Avoiding repeated navigation loops
+- Navigation-loop prevention
 - Overall mission completion
 
-Each test provided feedback that could be used to adjust the physical design or programming logic before testing again.
+Each test provided feedback that could be used to modify either the physical design or MATLAB control logic.
+
+This iterative process followed a basic engineering cycle:
+
+```text
+Design
+  │
+  ▼
+Build
+  │
+  ▼
+Program
+  │
+  ▼
+Test
+  │
+  ▼
+Identify Failure
+  │
+  ▼
+Improve
+  │
+  └──────────► Test Again
+```
 
 ---
 
-## 💡 What I Learned
+## 💡 Engineering Takeaways
 
-This project provided hands-on experience combining software, robotics, and mechanical design to solve an engineering challenge.
+This project provided hands-on experience combining **software, autonomous systems, sensors, and mechanical design** to solve a physical engineering problem.
 
 Key takeaways included:
 
-- Programming robotic hardware using MATLAB
+- Programming physical hardware using MATLAB
 - Integrating multiple sensors into autonomous decision-making
-- Translating sensor readings into physical motor actions
-- Developing conditional navigation logic
-- Combining software with physical hardware
-- Troubleshooting autonomous system behavior
-- Testing and iteratively improving a physical system
-- Designing around stability and passenger safety
+- Translating environmental sensor readings into motor actions
+- Developing conditional navigation algorithms
+- Designing a continuous sense-decide-act control loop
+- Coordinating software with mechanical hardware
+- Troubleshooting unpredictable physical-system behavior
+- Iteratively improving autonomous navigation
+- Designing around vehicle and passenger stability
 - Collaborating within an engineering team
+- Testing an integrated autonomous system against mission requirements
+
+The project demonstrated how software decisions directly influence physical system behavior and provided an introduction to the engineering principles behind autonomous navigation systems.
 
 ---
 
 ## 📁 Repository Structure
 
 ```text
-autonomous-lego-ev3-robot/
+autonomous-vehicle-navigation-system/
 │
 ├── README.md
 │
@@ -281,8 +398,20 @@ autonomous-lego-ev3-robot/
 
 ---
 
-## 📝 Project Note
+## 📝 Project Documentation Note
 
-This repository documents the design, functionality, and engineering process of the original LEGO MINDSTORMS EV3 project.
+This repository documents the design, functionality, and engineering process of the original autonomous vehicle project.
 
-The original MATLAB source code is no longer available. The system behavior and navigation concepts documented here are based on the original project's design and functionality rather than a reproduction of the original source code.
+The vehicle was physically implemented using **LEGO MINDSTORMS EV3 hardware and MATLAB** as a small-scale autonomous navigation prototype.
+
+The original MATLAB source code is no longer available. The navigation logic, system behavior, hardware configuration, and engineering concepts documented here are based on the original project's design and demonstrated functionality rather than a reproduction of the original source code.
+
+---
+
+## 🚗 Project Summary
+
+**Autonomous Vehicle Navigation System** demonstrates a small-scale implementation of autonomous transportation concepts through the integration of:
+
+**Environmental Sensing → Decision Logic → Navigation → Physical Actuation → Passenger Transportation**
+
+Using MATLAB and LEGO MINDSTORMS EV3, the project transformed sensor input into autonomous physical behavior while completing a defined transportation mission without direct human control.
